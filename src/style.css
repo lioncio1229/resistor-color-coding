@@ -11,7 +11,7 @@ body
     font-family: 'poppins';
 }
 
-.rcc-container
+.container
 {
     width : 100%;
     height : 100vh;
@@ -20,14 +20,14 @@ body
 }
 
 /* #region Viewport */
-.rcc-viewport
+.viewport
 {
     width: 90%;
     height: 500px;
     overflow: hidden;
 }
 
-.rcc-viewport .rcc-content
+.viewport .rcc-content
 {
     width: 200%;
     height: inherit;
@@ -38,12 +38,12 @@ body
     animation-fill-mode: forwards;
 }
 
-.rcc-viewport .rcc-to-main-animation
+.viewport .rcc-to-main-animation
 {
     animation-name: rcc-toMain;
 }
 
-.rcc-viewport .rcc-to-img-animation
+.viewport .rcc-to-img-animation
 {
     animation-name: rcc-toImg;
 }
@@ -60,12 +60,12 @@ body
     to{transform: translateX(-63%);}
 }
 
-.rcc-viewport .rcc-main
+.viewport .rcc-main
 {
     margin-top: 70px;
 }
 
-.rcc-viewport img
+.viewport img
 {
     margin-top: 20px;
     width: 600px;
@@ -74,14 +74,14 @@ body
 /* #endregion */
 
 /* #region Utilities */
-.rcc-flex-container
+.flex-container
 {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.rcc-flex-container-column
+.flex-container-column
 {
     display: flex;
     justify-content: space-between;
@@ -89,7 +89,7 @@ body
     flex-direction: column;
 }
 
-.rcc-selection
+.selection
 {
     cursor: pointer;
     user-select: none;
@@ -98,7 +98,7 @@ body
 
 /* #region Navigation Bar */
 
-    .rcc-navbar
+    .navbar
     {
         padding: 0 20px;
         background-color: white;
@@ -106,24 +106,24 @@ body
         height: 60px;
     }
 
-    .rcc-navbar h1
+    .navbar h1
     {
         font-size: 25px;
         color: var(--primary-color);
     }
 
-    .rcc-nav-menu
+    .nav-menu
     {
         height: 100%;
         width: 480px;
     }
 
-    .rcc-nav-buttons
+    .nav-buttons
     {
         height: 100%;
     }
 
-    .rcc-nav-buttons div
+    .nav-buttons div
     {
         width: 100px;
         height: 100%;
@@ -133,7 +133,7 @@ body
 
 /* #region Button */
 
-.rcc-btn
+.btn
 {
     cursor: pointer;
     user-select: none;
@@ -142,37 +142,37 @@ body
     align-items: center;
 }
 
-.rcc-btn-r-s
+.btn-r-s
 {
     border-radius: 10px;
 }
 
-.rcc-btn-m
+.btn-m
 {
     width: 160px;
     height: 38px;
 }
 
-.rcc-primary
+.primary
 {
     background-color: var(--primary-color);
     color: white;
     transition: background-color 0.2s;
 }
 
-.rcc-light
+.light
 {
     background-color: white;
     color: var(--primary-color);
     transition: background-color 0.2s;
 }
 
-.rcc-primary-hover:hover
+.primary-hover:hover
 {
     background-color: #016dac;
 }
 
-.rcc-light-hover:hover
+.light-hover:hover
 {
     background-color: rgb(243, 237, 237);
 }
@@ -181,13 +181,13 @@ body
 
 /* #region Resistor */
 
-.rcc-resistor
+.resistor
 {
     width: 100%;
     height: 220px;
 }
 
-.rcc-resistor-wire
+.resistor-wire
 {
     width: 1200px;
     height: 12px;
@@ -197,7 +197,7 @@ body
     position: relative;
 }
 
-.rcc-resistor-body
+.resistor-body
 {
     width: 800px;
     height: 170px;
@@ -212,7 +212,7 @@ body
     justify-content: space-evenly;
 }
 
-.rcc-band
+.band
 {
     background-color: black;
     height: inherit;
@@ -220,7 +220,7 @@ body
     position: relative;
 }
 
-.rcc-band-info
+.band-info
 {
     width: 100px;
     height: auto;
@@ -231,7 +231,7 @@ body
     left: -50%;
 }
 
-.rcc-band-info h2
+.band-info h2
 {
     font-weight: bold;
     font-size: 20px;
@@ -259,13 +259,13 @@ body
 /* #endregion */
 
 /* #region Output */
-.rcc-output
+.output
 {
     width: 400px;
     margin-bottom: 2px;
 }
 
-.rcc-output div
+.output div
 {
     height: 35px;
     line-height: 35px;
@@ -277,7 +277,7 @@ body
 /* #endregion */
 
 /* #region ColorSelect */
-.rcc-color-select
+.color-select
 {
     width: 150px;
     position: absolute;
@@ -286,7 +286,7 @@ body
     z-index: 14;
 }
 
-.rcc-color-item
+.color-item
 {
     width: 100%;
     padding: 1.2px;
@@ -295,7 +295,7 @@ body
     position: relative;
 }
 
-.rcc-caret-right
+.caret-right
 {
     position: absolute;
     left: 10px;
@@ -307,7 +307,7 @@ body
 /* #endregion */
 
 /* #region Footer */
-.rcc-footer
+.footer
 {
     height: 40px;
     width: 100%;
@@ -320,7 +320,7 @@ body
     bottom: 0;
 }
 
-.rcc-footer b
+.footer b
 {
     margin-right: 7px;
 }

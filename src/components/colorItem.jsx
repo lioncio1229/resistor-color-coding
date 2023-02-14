@@ -35,9 +35,9 @@ export default function ColorItem({ bandName, colorCode, handleColorClick }) {
             onClick={(e) => handleColorClick(e, colorCode["color"])}
             onMouseEnter={mouseEnter}
             onMouseLeave={mouseLeave}
-            className={"rcc-color-item rcc-selection " + colorCode["color"]}
+            className={"color-item selection " + colorCode["color"]}
             >
-            <FontAwesomeIcon ref={caretRightRef} icon={faCaretRight} className="rcc-caret-right" />
+            <FontAwesomeIcon ref={caretRightRef} icon={faCaretRight} className="caret-right" />
             {displayValue(colorCode, bandName)}
         </div>
     );

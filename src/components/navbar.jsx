@@ -4,10 +4,10 @@ export default function NavBar({ bandType, setBandType, view, setView }) {
 
   const getClass = (currentBandType) => {
     return (
-      "rcc-btn " +
+      "btn " +
       (currentBandType === bandType && view !== 'rcc-toImg'
-        ? "rcc-primary rcc-primary-hover"
-        : "rcc-light rcc-light-hover")
+        ? "primary primary-hover"
+        : "light light-hover")
     );
   };
 
@@ -21,11 +21,11 @@ export default function NavBar({ bandType, setBandType, view, setView }) {
   };
 
   return (
-    <div className="rcc-navbar rcc-flex-container">
+    <div className="navbar flex-container">
       <h1>Resistor Color Coding</h1>
 
-      <div className="rcc-nav-menu rcc-flex-container">
-        <div className="rcc-nav-buttons rcc-flex-container">
+      <div className="nav-menu flex-container">
+        <div className="nav-buttons flex-container">
           {bands.map((band) => (
             <div
               key={band.type}
@@ -39,7 +39,7 @@ export default function NavBar({ bandType, setBandType, view, setView }) {
 
         <div
           onClick={handleColorCodeInfoClick}
-          className="rcc-btn rcc-btn-m rcc-btn-r-s rcc-primary rcc-primary-hover"
+          className="btn btn-m btn-r-s primary primary-hover"
         >
           Color Codes
         </div>

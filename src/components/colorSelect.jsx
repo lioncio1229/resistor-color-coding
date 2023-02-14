@@ -24,7 +24,7 @@ export default function ColorSelect({ bandName, handleCloseColorSelect}) {
   });
 
   return (
-    <div ref={listColorRef} className="rcc-color-select rcc-flex-container-column">
+    <div ref={listColorRef} className="color-select flex-container-column">
       {colorcodeTable.map(
         (colorCode) =>
           colorCode[bandName] !== undefined && (

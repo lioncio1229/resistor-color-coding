@@ -12,7 +12,7 @@ const ResistorColorCoding = () => {
   const { view, setView, getAnimationClass } = useViewportAnimation();
 
   return (
-    <div className='rcc-container'>
+    <div className='container'>
       <NavBar
         bandType={bandType}
         setBandType={setBandType}
@@ -21,9 +21,9 @@ const ResistorColorCoding = () => {
       />
 
       <ColorCodingProvider band={bandType}>
-        <div className="rcc-flex-container-column">
+        <div className="flex-container-column">
 
-          <div className="rcc-viewport">
+          <div className="viewport">
             <div className={"rcc-content " + getAnimationClass()}>
               <div className="rcc-main">
                 <Resistor />
@@ -33,7 +33,7 @@ const ResistorColorCoding = () => {
             </div>
           </div>
 
-          <div className="rcc-footer rcc-primary">
+          <div className="footer primary">
             <b>Resistor Color Coding created</b> by Lioncio Morcilla
           </div>
         </div>
