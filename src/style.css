@@ -1,0 +1,328 @@
+:root
+{
+    --primary-color: #005b8f;
+}
+
+body
+{
+    margin: 0;
+    padding: 0;
+    background-color: #FBF9F9;
+    font-family: 'poppins';
+}
+
+.rcc-container
+{
+    width : 100%;
+    height : 100vh;
+    font-family: 'poppins','Courier New', Courier, monospace;
+    background-color: #FBF9F9;
+}
+
+/* #region Viewport */
+.rcc-viewport
+{
+    width: 90%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.rcc-viewport .rcc-content
+{
+    width: 200%;
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    animation-duration: 0.5s;
+    transform: translateX(0.5%);
+    animation-fill-mode: forwards;
+}
+
+.rcc-viewport .rcc-to-main-animation
+{
+    animation-name: rcc-toMain;
+}
+
+.rcc-viewport .rcc-to-img-animation
+{
+    animation-name: rcc-toImg;
+}
+
+@keyframes rcc-toMain
+{
+    from{transform: translateX(-63%);}
+    to{transform: translateX(0.5%);}
+}
+
+@keyframes rcc-toImg
+{
+    from{transform: translateX(0.5%);}
+    to{transform: translateX(-63%);}
+}
+
+.rcc-viewport .rcc-main
+{
+    margin-top: 70px;
+}
+
+.rcc-viewport img
+{
+    margin-top: 20px;
+    width: 600px;
+}
+
+/* #endregion */
+
+/* #region Utilities */
+.rcc-flex-container
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rcc-flex-container-column
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.rcc-selection
+{
+    cursor: pointer;
+    user-select: none;
+}
+/* #endregion */
+
+/* #region Navigation Bar */
+
+    .rcc-navbar
+    {
+        padding: 0 20px;
+        background-color: white;
+        border-bottom: 1px solid lightgrey;
+        height: 60px;
+    }
+
+    .rcc-navbar h1
+    {
+        font-size: 25px;
+        color: var(--primary-color);
+    }
+
+    .rcc-nav-menu
+    {
+        height: 100%;
+        width: 480px;
+    }
+
+    .rcc-nav-buttons
+    {
+        height: 100%;
+    }
+
+    .rcc-nav-buttons div
+    {
+        width: 100px;
+        height: 100%;
+    }
+
+/* #endregion */
+
+/* #region Button */
+
+.rcc-btn
+{
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rcc-btn-r-s
+{
+    border-radius: 10px;
+}
+
+.rcc-btn-m
+{
+    width: 160px;
+    height: 38px;
+}
+
+.rcc-primary
+{
+    background-color: var(--primary-color);
+    color: white;
+    transition: background-color 0.2s;
+}
+
+.rcc-light
+{
+    background-color: white;
+    color: var(--primary-color);
+    transition: background-color 0.2s;
+}
+
+.rcc-primary-hover:hover
+{
+    background-color: #016dac;
+}
+
+.rcc-light-hover:hover
+{
+    background-color: rgb(243, 237, 237);
+}
+
+/* #endregion */
+
+/* #region Resistor */
+
+.rcc-resistor
+{
+    width: 100%;
+    height: 220px;
+}
+
+.rcc-resistor-wire
+{
+    width: 1200px;
+    height: 12px;
+    background-color: grey;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.rcc-resistor-body
+{
+    width: 800px;
+    height: 170px;
+    background-color: #FFCC74;
+    border-radius: 137px;
+    border: 1px solid grey;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.rcc-band
+{
+    background-color: black;
+    height: inherit;
+    width: 50px;
+    position: relative;
+}
+
+.rcc-band-info
+{
+    width: 100px;
+    height: auto;
+    color: var(--primary-color);
+    text-align: center;
+    position: absolute;
+    top: -75px;
+    left: -50%;
+}
+
+.rcc-band-info h2
+{
+    font-weight: bold;
+    font-size: 20px;
+    margin: 2px 0;
+}
+
+/* #region BG Colors */
+
+.black{ background-color: black; color: white}
+.brown{ background-color: brown; color: white}
+.red{ background-color: red; color : black}
+.orange{ background-color: orange; color : black}
+.yellow{ background-color: yellow; color : black}
+.green{ background-color: green; color: white}
+.blue{ background-color: blue; color: white}
+.violet{ background-color: violet; color : black}
+.gray{ background-color: gray; color : white}
+.white{ background-color: white; color : black}
+.gold{ background-color: gold; color : black}
+.silver{ background-color: silver; color : black}
+.none{ background-color: rgb(97, 97, 97); color : white}
+
+/* #endregion */
+
+/* #endregion */
+
+/* #region Output */
+.rcc-output
+{
+    width: 400px;
+    margin-bottom: 2px;
+}
+
+.rcc-output div
+{
+    height: 35px;
+    line-height: 35px;
+    width: 100%;
+    border: 1px solid var(--primary-color);
+    text-align: center;
+}
+
+/* #endregion */
+
+/* #region ColorSelect */
+.rcc-color-select
+{
+    width: 150px;
+    position: absolute;
+    top: 20%;
+    left: -100%;
+    z-index: 14;
+}
+
+.rcc-color-item
+{
+    width: 100%;
+    padding: 1.2px;
+    padding-left: 40px;
+    font-weight: normal;
+    position: relative;
+}
+
+.rcc-caret-right
+{
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    display: none;
+}
+/* #endregion */
+
+/* #region Footer */
+.rcc-footer
+{
+    height: 40px;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    bottom: 0;
+}
+
+.rcc-footer b
+{
+    margin-right: 7px;
+}
+
+/* #endregion */
